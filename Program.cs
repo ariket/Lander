@@ -13,9 +13,9 @@ namespace Lander
 
         public void Print()
         {
-            Console.WriteLine("Landet: " + namn + "  ");
-            Console.WriteLine($"Telefon:   ");
-            Console.WriteLine("Adress:  " );
+            Console.Write(" "+ namn + "  ");
+            Console.Write($"{styrestyp} ");
+            Console.WriteLine( huvudstad +"  " + invånarantal);
         }
 
     }
@@ -30,7 +30,9 @@ namespace Lander
             Land sverige = new Land() { namn = "Sverige", styrestyp = "monarki", huvudstad = "Stockholm", invånarantal = 10512820 };
             Land tyskland = new Land() { namn = "Tyskland", styrestyp = "republik", huvudstad = "Berlin", invånarantal = 83783902 };
             Land sanmarino = new Land() { namn = "San Marino", styrestyp = "republik", huvudstad = "San Marino", invånarantal = 33600 };
- 
+
+            sverige.Print();
+        
         }
    
     
