@@ -31,17 +31,25 @@ namespace Lander
             Land tyskland = new Land() { namn = "Tyskland", styrestyp = "republik", huvudstad = "Berlin", invånarantal = 83783902 };
             Land sanmarino = new Land() { namn = "San Marino", styrestyp = "republik", huvudstad = "San Marino", invånarantal = 33600 };
 
-            sverige.Print();
+            //sverige.Print();
 
             Land[] länder = new Land[7] { sverige, tyskland, sanmarino, new Land() { namn = "Dan", styrestyp = "monarki", huvudstad = "Stockholm", invånarantal = 10512820 },
-            new Land() { namn = "Ita", styrestyp = "monarki", huvudstad = "Stockholm", invånarantal = 10512820 },
-            new Land() { namn = "Tje", styrestyp = "monarki", huvudstad = "Stockholm", invånarantal = 10512820 },
-            new Land() { namn = "Run", styrestyp = "monarki", huvudstad = "Stockholm", invånarantal = 10512820 } };
+            new Land() { namn = "Ita", styrestyp = "republik", huvudstad = "Stockholm", invånarantal = 10512820 },
+            new Land() { namn = "Tje", styrestyp = "republik", huvudstad = "Stockholm", invånarantal = 10512820 },
+            new Land() { namn = "Run", styrestyp = "republik", huvudstad = "Stockholm", invånarantal = 10512820 } };
 
 
             foreach (Land xx in länder)
             {
                 xx.Print();
+            }
+
+            for (int i = 0; i < länder.Length ; i++)
+            {
+                if (länder[i].styrestyp == "republik")
+                {
+                    Console.Write(" " + i + "  " + länder[i].namn);
+                }
             }
 
         }
